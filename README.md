@@ -1,8 +1,9 @@
 # Welcome to React Router!
 
 A modern, production-ready template for building full-stack React applications using React Router.
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/aungNyeinChan93/react_05.5.25)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+https://stackblitz.com/~/github.com/aungNyeinChan93/react_05.5.25
 
 ## Features
 
@@ -11,8 +12,8 @@ A modern, production-ready template for building full-stack React applications u
 - 📦 Asset bundling and optimization
 - 🔄 Data loading and mutations
 - 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🎨 TailwindCSS for styling
+- 📖 [React Router documentation](https://reactrouter.com/)
 
 ## Getting Started
 
@@ -60,7 +61,7 @@ The containerized application can be deployed to any platform that supports Dock
 - AWS ECS
 - Google Cloud Run
 - Azure Container Apps
-- Digital Ocean App Platform
+- DigitalOcean App Platform
 - Fly.io
 - Railway
 
@@ -68,7 +69,7 @@ The containerized application can be deployed to any platform that supports Dock
 
 If you're familiar with deploying Node applications, the built-in app server is production-ready.
 
-Make sure to deploy the output of `npm run build`
+Make sure to deploy the output of `npm run build`:
 
 ```
 ├── package.json
@@ -80,7 +81,7 @@ Make sure to deploy the output of `npm run build`
 
 ## Styling
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This template comes with [Tailwind CSS](https://tailwindcss.com/) pre-configured for a simple default starting experience. You can use any CSS framework you prefer.
 
 ---
 
