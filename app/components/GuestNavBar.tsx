@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
-const Navbar = () => {
+const GuestNavbar = () => {
     return (
         <React.Fragment>
             <header className="bg-white dark:bg-gray-900">
@@ -19,80 +19,24 @@ const Navbar = () => {
                         </div>
 
                         <div className="md:flex md:items-center md:gap-12">
-                            <nav aria-label="Global" className="hidden md:block">
-                                <ul className="flex items-center gap-6 text-sm">
-                                    <li>
-                                        <Link
-                                            className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            to="/about"
-                                        >
-                                            About
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link
-                                            className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            to="/posts"
-                                        >
-                                            Posts
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <a
-                                            className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
-                                        >
-                                            History
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a
-                                            className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
-                                        >
-                                            Services
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <Link
-                                            className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            to="/test"
-                                        >
-                                            Test
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <a
-                                            className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
-                                        >
-                                            Blog
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
 
                             <div className="flex items-center gap-4">
                                 <div className="sm:flex sm:gap-4">
                                     <NavLink
-                                        className={({ isActive }) => isActive ? 'rounded-md !bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500' : 'rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500'}
+                                        className={({ isActive }) => isActive ? 'rounded-md !bg-red-600 px-5 py-2.5 text-sm font-medium text-black shadow-sm dark:hover:bg-teal-500' : 'rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500'}
                                         to="/login"
                                     >
                                         Login
                                     </NavLink>
 
                                     <div className="hidden sm:flex">
-                                        <a
-                                            className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
-                                            href="#"
+                                        <NavLink
+                                            className={({ isActive }) => isActive ? 'rounded-md !bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500' : 'rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500'}
+                                            to="/register"
                                         >
                                             Register
-                                        </a>
+                                        </NavLink>
+
                                     </div>
                                 </div>
 
@@ -121,4 +65,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default GuestNavbar;
