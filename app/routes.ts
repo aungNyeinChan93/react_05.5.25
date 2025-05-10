@@ -1,5 +1,4 @@
-import { type RouteConfig, index, layout, route } from "@react-router/dev/routes";
-import { Layout } from "./root";
+import { type RouteConfig, index, layout, prefix, route } from "@react-router/dev/routes";
 
 export default [
 
@@ -13,6 +12,12 @@ export default [
         route('/posts', './layouts/postLayout.tsx', [
             index('./routes/posts.tsx'),
             route(":id", "./routes/detailPost.tsx"),
+        ]),
+
+        // products
+        ...prefix('products', [
+            index('./routes/products/ProductPage.tsx'),
+            route('/:id', './routes/products/DetailProduct.tsx')
         ])
     ]),
 
@@ -20,6 +25,8 @@ export default [
         route('/login', "./routes/login.tsx"),
         route('/register', "./routes/register.tsx"),
     ]),
+
+    route('*', './routes/NotFoundPage.tsx')
 
 
 ] satisfies RouteConfig;
