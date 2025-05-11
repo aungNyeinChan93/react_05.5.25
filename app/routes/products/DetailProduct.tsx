@@ -60,7 +60,6 @@ const DetailProduct = ({ loaderData }: Route.ComponentProps) => {
                             <Link to={'/products'} className='mt-3 '>Back</Link>
                         </section>
                     </div>
-
                 )}
         </React.Fragment>
     );

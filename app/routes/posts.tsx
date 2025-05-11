@@ -1,6 +1,7 @@
 import React from 'react';
 
 import type { Route } from '../+types/root';
+import PostCard from '~/components/PostCard';
 
 export function meta({ }: Route.MetaArgs) {
 
@@ -9,10 +10,40 @@ export function meta({ }: Route.MetaArgs) {
     ];
 };
 
-const Posts = () => {
+export async function clientLoader({ params }: Route.ClientLoaderArgs) {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    const data = await response.json();
+    return { data }
+}
+
+export function HydrateFallback() {
+    return (
+        <>
+            <p>spinner</p>
+        </>
+    );
+}
+
+interface Post {
+    id: number,
+    userId: number,
+    title: string,
+    body: string
+}
+
+const Posts = ({ loaderData }: Route.ComponentProps) => {
+    const { data: posts }: { data: Post[] } = loaderData!;
+    console.log(posts);
+
     return (
         <React.Fragment>
-            <h1>Posts Page</h1>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-10 my-2'>
+                {
+                    posts.map(post => {
+                        return <PostCard post={post} />
+                    })
+                }
+            </div>
         </React.Fragment>
     );
 };
