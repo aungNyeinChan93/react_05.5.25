@@ -2,6 +2,7 @@ import React from 'react';
 
 import type { Route } from '../+types/root';
 import PostCard from '~/components/PostCard';
+import Loading from '~/components/Loading';
 
 export function meta({ }: Route.MetaArgs) {
 
@@ -18,9 +19,9 @@ export async function clientLoader({ params }: Route.ClientLoaderArgs) {
 
 export function HydrateFallback() {
     return (
-        <>
-            <p>spinner</p>
-        </>
+        <section className='flex justify-center items-center w-full h-screen'>
+            <Loading />
+        </section>
     );
 }
 
