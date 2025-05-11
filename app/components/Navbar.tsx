@@ -21,14 +21,7 @@ const Navbar = () => {
                         <div className="md:flex md:items-center md:gap-12">
                             <nav aria-label="Global" className="hidden md:block">
                                 <ul className="flex items-center gap-6 text-sm">
-                                    <li>
-                                        <Link
-                                            className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            to="/about"
-                                        >
-                                            About
-                                        </Link>
-                                    </li>
+
 
                                     <li>
                                         <Link
@@ -40,22 +33,15 @@ const Navbar = () => {
                                     </li>
 
                                     <li>
-                                        <a
+                                        <Link
                                             className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
+                                            to={'/products'}
                                         >
-                                            History
-                                        </a>
+                                            Products
+                                        </Link>
                                     </li>
 
-                                    <li>
-                                        <a
-                                            className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
-                                        >
-                                            Services
-                                        </a>
-                                    </li>
+
 
                                     <li>
                                         <Link
@@ -67,13 +53,14 @@ const Navbar = () => {
                                     </li>
 
                                     <li>
-                                        <a
+                                        <Link
                                             className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
+                                            to="/about"
                                         >
-                                            Blog
-                                        </a>
+                                            About
+                                        </Link>
                                     </li>
+
                                 </ul>
                             </nav>
 
